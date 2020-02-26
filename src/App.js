@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import Home from './Components/Home';
+import Films from './Components/Films';
+import People from './Components/People';
+import PeopleID from './Components/PeopleID';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export class App extends Component {
+  render() {
+    return (
+      <Router>
+        <>
+          <Link to="/"><button type="button">Home</button></Link>
+          <Link to="/films"><button type="button">Films</button></Link>
+          <Link to="/people"><button type="button">People</button></Link>
+          <Switch>
+            <Route exact path = '/' component = {Home}/>
+            <Route exact path = '/films' component = {Films}/>
+            <Route exact path = '/people' component = {People}/>
+            <Route exact path = '/people/:id' component = {PeopleID}/>  {/* new route. will it work? */}
+          </Switch>
+        </>
+      </Router>
+    )
+  }
 }
 
-export default App;
+export default App
+

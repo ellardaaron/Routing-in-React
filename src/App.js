@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import Films from './Components/Films';
 import People from './Components/People';
 import PeopleID from './Components/PeopleID';
+import FilmID from './Components/FilmID';
 
 
 export class App extends Component {
@@ -18,7 +19,8 @@ export class App extends Component {
             <Route exact path = '/' component = {Home}/>
             <Route exact path = '/films' component = {Films}/>
             <Route exact path = '/people' component = {People}/>
-            <Route exact path = '/people/:id' component = {PeopleID}/>  {/* new route. will it work? */}
+            <Route exact path = '/people/:id' component = {PeopleID}/>
+            <Route exact path = '/films/:id' component = {FilmID}/>
           </Switch>
         </>
       </Router>

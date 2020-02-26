@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import 'es6-promise';
 import 'isomorphic-fetch';
+import { Link } from 'react-router-dom';
 
 export class Films extends Component {
 
@@ -24,6 +25,7 @@ export class Films extends Component {
                         <div className="card-body">
                             <h5 className="card-title">{film.title}</h5>
                             <p className="card-text">{film.description}</p>
+                            <Link to={`/films/${film.id}`}><button type="button">Learn More</button></Link>
                         </div>
                     </div>
                     )

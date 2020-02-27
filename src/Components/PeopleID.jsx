@@ -23,8 +23,10 @@ export class PeopleID extends Component {
                 <div className="card" key={this.state.PersonCard.id}>
                     <div className="card-body">
                         <h5 className="card-title">{this.state.PersonCard.name}</h5>
-                        <p className="card-text">{this.state.PersonCard.age}</p>
-                        <p className="card-text">{this.state.PersonCard.gender}</p>
+                        <p className="card-text">{'age: '}{this.state.PersonCard.age}</p>
+        <p className="card-text">{'gender: '}  {this.state.PersonCard.gender}</p>
+                        <p className="card-text"> {'eye color: '} {this.state.PersonCard.eye_color}</p>
+                        <p className="card-text"> {'hair color: '} {this.state.PersonCard.hair_color}</p>
                     </div>
                 </div>
 

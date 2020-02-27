@@ -24,7 +24,6 @@ export class Films extends Component {
                     return (<div className="card" key={film.id}>
                         <div className="card-body">
                             <h5 className="card-title">{film.title}</h5>
-                            <p className="card-text">{film.description}</p>
                             <Link to={`/films/${film.id}`}><button type="button">Learn More</button></Link>
                         </div>
                     </div>

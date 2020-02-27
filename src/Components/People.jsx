@@ -23,8 +23,6 @@ export class People extends Component {
                     return (<div className="card" key={person.id}>
                         <div className="card-body">
                             <h5 className="card-title">{person.name}</h5>
-                            <p className="card-text">{person.age}</p>
-                            <p className="card-text">{person.gender}</p>
                             <Link to={`/people/${person.id}`}><button type="button">Learn More</button></Link>
                         </div>
                     </div>
